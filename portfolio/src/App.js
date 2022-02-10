@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Canvas } from "@react-three/fiber";
+import ThreeDObj from "../src/components/ThreeDObj/ThreeDObj";
+import Hero from "../src/components/Hero/Hero";
+import Projects from "../src/components/Projects/Projects";
+import Technologies from "../src/components/Technologies/Technologies";
+import Timeline from "../src/components/TimeLine/TimeLine";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Hero />
+        <Canvas>
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <ThreeDObj position={[-1.2, 0, 0]} />
+          <ThreeDObj position={[1.2, 0, 0]} />
+        </Canvas>
+      </div>
+      <Projects />
+      <Technologies />
+      <Timeline />
     </div>
   );
 }
