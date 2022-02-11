@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Canvas } from "@react-three/fiber";
 import ThreeDObj from "../src/components/ThreeDObj/ThreeDObj";
@@ -11,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <Hero />
+        {/* <Hero /> */}
         <Canvas>
           <ambientLight />
           <pointLight position={[10, 10, 10]} />
@@ -19,9 +18,9 @@ function App() {
           <ThreeDObj position={[1.2, 0, 0]} />
         </Canvas>
       </div>
-      <Projects />
-      <Technologies />
-      <Timeline />
+      {/* <Projects /> */}
+      {/* <Technologies /> */}
+      {/* <Timeline /> */}
     </div>
   );
 }

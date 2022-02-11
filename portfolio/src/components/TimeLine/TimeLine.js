@@ -29,17 +29,17 @@ const Timeline = () => {
   //   return node.scrollTo({ left, behavior: 'smooth' });
   // }
 
-  const handleClick = (e, i) => {
-    e.preventDefault();
+  // const handleClick = (e, i) => {
+  //   e.preventDefault();
 
-    if (carouselRef.current) {
-      const scrollLeft = Math.floor(
-        carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
-      );
+  //   if (carouselRef.current) {
+  //     const scrollLeft = Math.floor(
+  //       carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
+  //     );
 
-      scroll(carouselRef.current, scrollLeft);
-    }
-  };
+  //     scroll(carouselRef.current, scrollLeft);
+  //   }
+  // };
 
   const handleScroll = () => {
     if (carouselRef.current) {
@@ -55,13 +55,13 @@ const Timeline = () => {
 
   // snap back to beginning of scroll when window is resized
   // avoids a bug where content is covered up if coming from smaller screen
-  useEffect(() => {
-    const handleResize = () => {
-      scroll(carouselRef.current, 0);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     scroll(carouselRef.current, 0);
+  //   };
 
-    window.addEventListener("resize", handleResize);
-  }, []);
+  //   window.addEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <Section id="about">
@@ -82,7 +82,7 @@ const Timeline = () => {
                   index={index}
                   id={`carousel__item-${index}`}
                   active={activeItem}
-                  onClick={(e) => handleClick(e, index)}
+                  // onClick={(e) => handleClick(e, index)}
                 >
                   <CarouselItemTitle>
                     {milestone.year}
@@ -133,7 +133,7 @@ const Timeline = () => {
               key={index}
               index={index}
               active={activeItem}
-              onClick={() => handleClick(e, index)}
+              // onClick={() => handleClick(e, index)}
               type="button"
             >
               <CarouselButtonDot active={activeItem} />
