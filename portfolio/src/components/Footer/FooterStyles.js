@@ -11,7 +11,6 @@ export const FooterWrapper = styled.section`
 export const LinkItem = styled.a`
   font-size: 18px;
   line-height: 30px;
-  color: rgba(255, 255, 255, 0.75);
   margin-bottom: 16px;
   transition: 0.3s ease;
   position: relative;
@@ -37,7 +36,6 @@ export const CompanyContainer = styled.div`
 `;
 
 export const Slogan = styled.p`
-  color: rgba(255, 255, 255, 0.5);
   min-width: 280px;
   letter-spacing: 0.02em;
   font-size: 18px;
@@ -70,6 +68,5 @@ export const LinkTitle = styled.h4`
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
   margin-bottom: 16px;
 `;

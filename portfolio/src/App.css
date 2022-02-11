@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-color: rgb(140, 180, 128);
+  font-family: "Orbitron";
+  /* background-image: url(../public/flower-of-life-pattern.jpg); */
+  color: #282c34;
 }
 
 .App-logo {

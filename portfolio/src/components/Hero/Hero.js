@@ -6,6 +6,8 @@ import {
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
+import { Canvas } from "@react-three/fiber";
+import ThreeDObj from "../ThreeDObj/ThreeDObj";
 
 const Hero = () => (
   <Section row nopadding>
