@@ -6,7 +6,7 @@ import {
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
-import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 import ThreeDObj from "../ThreeDObj/ThreeDObj";
 
 const Hero = () => (
@@ -29,6 +29,9 @@ const Hero = () => (
         Learn more
       </Button>
     </LeftSection>
+    <Suspense fallback={<p>Error while loading 3D object</p>}>
+      <ThreeDObj className="artifact" url="/models/ship2.obj" />
+    </Suspense>
   </Section>
   // <div></div>
 );
