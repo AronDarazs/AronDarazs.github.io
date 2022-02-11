@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
@@ -16,12 +15,10 @@ import {
 const Header = () => (
   <Container>
     <Div1>
-      <Link href="/">
-        <a>
-          <DiCssdeck size="3rem" />
-          <span>Portfolio</span>
-        </a>
-      </Link>
+      <a>
+        <DiCssdeck size="3rem" />
+        <span>Portfolio</span>
+      </a>
     </Div1>
     <Div2>
       <li>

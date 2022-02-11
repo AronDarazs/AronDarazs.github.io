@@ -28,6 +28,7 @@ const Hero = () => (
       </Button>
     </LeftSection>
   </Section>
+  // <div></div>
 );
 
 export default Hero;

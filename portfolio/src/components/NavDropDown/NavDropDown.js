@@ -19,12 +19,6 @@ export const DropDownContainer = styled.div`
   transform-origin: top;
   transform: ${({ active }) => active ? 'scaleY(1)' : 'scaleY(.3)'};
 
-  @media ${(props) => props.theme.breakpoints.md} {
-    top: 32px;
-  }
-  @media ${(props) => props.theme.breakpoints.sm} {
-    top: 24px;
-  }
 `
 export const DropDownItem = styled.a`
   width: 100%;
