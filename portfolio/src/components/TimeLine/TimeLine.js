@@ -1,22 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-
-import {
-  CarouselButton,
-  CarouselButtonDot,
-  CarouselButtons,
-  CarouselContainer,
-  CarouselItem,
-  CarouselItemImg,
-  CarouselItemText,
-  CarouselItemTitle,
-  CarouselMobileScrollNode,
-} from "./TimeLineStyles";
-import {
-  Section,
-  SectionDivider,
-  SectionText,
-  SectionTitle,
-} from "../../styles/GlobalComponents";
 import { TimeLineData } from "../../constants/constants";
 
 const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
@@ -64,29 +46,29 @@ const Timeline = () => {
   // }, []);
 
   return (
-    <Section id="about">
-      <SectionDivider />
+    <section id="about">
+      <span />
       <br />
-      <SectionTitle>My development</SectionTitle>
-      <SectionText>
+      <h2>My development</h2>
+      <p>
         My aim is to learn a big variety of languages, frameworks and libraries
         to be able to always come up with the most optimal solution for a
         problem.
-      </SectionText>
-      <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
+      </p>
+      <ul ref={carouselRef} onScroll={handleScroll}>
         <>
           {TimeLineData.map((milestone, index) => {
             return (
-              <CarouselMobileScrollNode key={index}>
-                <CarouselItem
+              <div key={index}>
+                <div
                   index={index}
                   id={`carousel__item-${index}`}
                   active={activeItem}
                   // onClick={(e) => handleClick(e, index)}
                 >
-                  <CarouselItemTitle>
+                  <h4>
                     {milestone.year}
-                    <CarouselItemImg
+                    <svg
                       width="208"
                       height="6"
                       viewBox="0 0 208 6"
@@ -117,31 +99,31 @@ const Timeline = () => {
                           />
                         </linearGradient>
                       </defs>
-                    </CarouselItemImg>
-                  </CarouselItemTitle>
-                  <CarouselItemText>{milestone.text}</CarouselItemText>
-                </CarouselItem>
-              </CarouselMobileScrollNode>
+                    </svg>
+                  </h4>
+                  <p>{milestone.text}</p>
+                </div>
+              </div>
             );
           })}
         </>
-      </CarouselContainer>
-      <CarouselButtons>
+      </ul>
+      <div>
         {TimeLineData.map((index) => {
           return (
-            <CarouselButton
+            <button
               key={index}
               index={index}
               active={activeItem}
               // onClick={() => handleClick(e, index)}
               type="button"
             >
-              <CarouselButtonDot active={activeItem} />
-            </CarouselButton>
+              <div active={activeItem} />
+            </button>
           );
         })}
-      </CarouselButtons>
-    </Section>
+      </div>
+    </section>
   );
 };
 

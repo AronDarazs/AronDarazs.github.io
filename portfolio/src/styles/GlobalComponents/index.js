@@ -14,8 +14,6 @@ export const Section = styled.section`
 
 export const SectionTitle = styled.h2`
   font-weight: 800;
-  font-size: ${(props) => (props.main ? "65px" : "56px")};
-  line-height: ${(props) => (props.main ? "72px" : "56px")};
   width: max-content;
   max-width: 100%;
   background: linear-gradient(
@@ -94,7 +92,6 @@ export const ButtonBack = styled.div`
   width: ${({ alt }) => (alt ? "150px" : "262px")};
   height: ${({ alt }) => (alt ? "52px" : "64px")};
   border-radius: 50px;
-  font-size: ${({ alt }) => (alt ? "20px" : "24px")};
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -128,7 +125,6 @@ export const ButtonFront = styled.button`
       : "linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)"};
   opacity: ${({ disabled }) => (disabled ? ".5" : "1")};
   transition: 0.4s ease;
-  font-size: ${({ alt }) => (alt ? "20px" : "24px")};
   font-weight: 600;
   align-items: center;
   justify-content: center;

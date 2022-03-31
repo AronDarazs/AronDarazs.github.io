@@ -1,0 +1,38 @@
+@import "../../styles/GlobalComponents/globalStyles.scss";
+
+.header-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  padding: 1rem;
+  padding-top: 2rem;
+}
+
+.header-wrapper {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.header-menupoints {
+  grid-area: 1 / 2 / 2 / 4;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  font-size: 2rem;
+  line-height: 32px;
+
+  transition: 0.4s ease;
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+  }
+}

@@ -1,68 +1,61 @@
 import React from "react";
+import "./Header.scss";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { DiCssdeck } from "react-icons/di";
 
-import {
-  Container,
-  Div1,
-  Div2,
-  Div3,
-  NavLink,
-  SocialIcons,
-} from "./HeaderStyles";
-
 const Header = () => (
-  <Container>
-    <Div1>
-      <a>
+  <div className="header-container">
+    <div className="header-wrapper">
+      <a className="nav-link" href="/">
         <DiCssdeck size="3rem" />
         <span>Portfolio</span>
       </a>
-    </Div1>
-    <Div2>
+    </div>
+    <div className="header-menupoints">
       <li>
-        {/* <Link> */}
-        <NavLink>
-          <a href="#projects">Projects</a>
-        </NavLink>
-        {/* </Link> */}
+        <a href="#projects" className="nav-link">
+          Projects
+        </a>
       </li>
       <li>
-        <NavLink>
-          <a href="#technologies">Technologies</a>
-        </NavLink>
+        <a href="#technologies" className="nav-link">
+          Technologies
+        </a>
       </li>
       <li>
-        <NavLink>
-          <a href="#about">About</a>
-        </NavLink>
+        <a href="#about" className="nav-link">
+          About
+        </a>
       </li>
-    </Div2>
-    <Div3>
-      <SocialIcons
+    </div>
+    <div>
+      <a
         href="https://www.linkedin.com/in/arondarazs/"
         target="_blank"
         rel="noreferrer"
+        className="nav-link"
       >
         <AiFillLinkedin size="3rem" />
-      </SocialIcons>
-      <SocialIcons
+      </a>
+      <a
         href="https://github.com/AronD00"
         target="_blank"
         rel="noreferrer"
+        className="nav-link"
       >
         <AiFillGithub size="3rem" />
-      </SocialIcons>
-      <SocialIcons
+      </a>
+      <a
         href="mailto: aron.darazs@moon42.com"
         target="_blank"
         rel="noreferrer"
+        className="nav-link"
       >
         <SiGmail size="3rem" />
-      </SocialIcons>
-    </Div3>
-  </Container>
+      </a>
+    </div>
+  </div>
 );
 
 export default Header;

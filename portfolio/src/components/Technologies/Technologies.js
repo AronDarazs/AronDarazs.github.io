@@ -1,59 +1,46 @@
 import React from "react";
 import { DiFirebase, DiReact, DiZend } from "react-icons/di";
-import {
-  Section,
-  SectionDivider,
-  SectionText,
-  SectionTitle,
-} from "../../styles/GlobalComponents";
-import {
-  List,
-  ListContainer,
-  ListItem,
-  ListParagraph,
-  ListTitle,
-} from "./TechnologiesStyles";
 
 const Technologies = () => (
-  <Section id="technologies">
-    <SectionDivider />
+  <section id="technologies">
+    <span />
     <br />
-    <SectionTitle>Technologies</SectionTitle>
-    <SectionText>
+    <h2>Technologies</h2>
+    <p>
       My goal is always to look for and integrate the most functional and
       up-to-date frameworks. I have experience in backend frontend and database
       development.
-    </SectionText>
-    <List>
-      <ListItem>
+    </p>
+    <ul>
+      <li>
         <DiReact size="3rem" />
-        <ListContainer>
-          <ListTitle>Front-End</ListTitle>
-          <ListParagraph>
+        <div>
+          <h4>Front-End</h4>
+          <p>
             Experience with <br /> React, NextJS
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      <ListItem>
+          </p>
+        </div>
+      </li>
+      <li>
         <DiFirebase size="3rem" />
-        <ListContainer>
-          <ListTitle>Back-End</ListTitle>
-          <ListParagraph>
+        <div>
+          <h4>Back-End</h4>
+          <p>
             Experience with <br /> ASP.NET, NodeJS
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-      <ListItem>
+          </p>
+        </div>
+      </li>
+      <li>
         <DiFirebase size="3rem" />
-        <ListContainer>
-          <ListTitle>Database Development</ListTitle>
-          <ListParagraph>
+        <div>
+          <h4>Database Development</h4>
+          <p>
             Experience with <br /> MySQL, FaunaDB
-          </ListParagraph>
-        </ListContainer>
-      </ListItem>
-    </List>
-  </Section>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
 );
 
 export default Technologies;
