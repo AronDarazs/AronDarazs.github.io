@@ -1,4 +1,3 @@
-import React from "react";
 import { createUseStyles } from "react-jss";
 
 // Create your Styles. Remember, since React-JSS uses the default preset,
